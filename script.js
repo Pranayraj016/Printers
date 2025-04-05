@@ -32,6 +32,14 @@ setInterval(() => {
   const scrollPosition = currentIndex * wrapper.clientWidth;
   wrapper.scrollTo({ left: scrollPosition, behavior: "smooth" });
 }, 5000);
+function scrollToSlide(index) {
+  const wrapper = document.getElementById("carouselWrapper");
+  const width = window.innerWidth;
+  wrapper.scrollTo({
+    left: width * index,
+    behavior: "smooth",
+  });
+}
 
 // product cards
 const cards = [
@@ -39,21 +47,21 @@ const cards = [
     image: "./img/useprinter1.png",
     title: "All In One Printers",
     description:
-      "Print, scan, copy, and sometimes fax in one multifunctional device. Ideal for homes and offices.",
+      "Handle printing, scanning, copying—and even faxing—with a single multifunction device. Perfect for both home and office use.",
     link: "Printers.html",
   },
   {
     image: "./img/useprinter2.png",
     title: "Wireless Printers",
     description:
-      "Print without cables using Wi-Fi, Bluetooth, or NFC. Great for flexible setups and multiple users.",
+      "Enjoy cable-free printing with built-in Wi-Fi, Bluetooth, or NFC. Ideal for shared spaces and modern, flexible workstations.",
     link: "Printers.html",
   },
   {
     image: "./img/useprinter3.png",
     title: "Home & Office Printers",
     description:
-      "Designed for homes and offices, offering basic printing and moderate workloads. Reliable and versatile.",
+      "Designed to meet the needs of home offices and small teams, these printers offer dependable performance for routine tasks and moderate print volumes.",
     link: "Printers.html",
   },
 ];
@@ -61,19 +69,27 @@ const cards = [
 // Select the container
 const container = document.getElementById("card-container");
 
-// Generate cards dynamically
+// Generate cards dynamically with looping animation
 cards.forEach((card) => {
-  const cardHTML = `
-        <div class="relative rounded-lg overflow-hidden shadow-lg">
-            <img src="${card.image}" alt="${card.title}" class="w-full h-96 object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center p-6">
-                <h2 class="text-white text-2xl font-bold mb-2">${card.title}</h2>
-                <p class="text-white mb-4">${card.description}</p>
-                <a href="${card.link}" class="bg-orange-500 text-white py-2 px-4 rounded">SHOP NOW</a>
-            </div>
+  const cardDiv = document.createElement("div");
+  cardDiv.innerHTML = `
+    <div class="group relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-orange-500/30 transition-all duration-500 transform hover:scale-105 hover:rotate-[0.5deg] cursor-pointer bg-gradient-to-br from-[#1e293b] to-[#0f172a]">
+      
+      <img src="${card.image}" alt="${card.title}" class="w-full h-96 object-cover opacity-100 group-hover:opacity-100 transition duration-500">
+      
+      <div class="absolute inset-0 bg-black/40 backdrop-blur-sm group-hover:backdrop-blur-sm flex flex-col justify-end p-6 text-white transition-all duration-500">
+        <div class="space-y-2">
+          <h2 class="text-2xl font-extrabold tracking-tight">${card.title}</h2>
+          <p class="text-sm leading-relaxed opacity-80">${card.description}</p>
+          <a href="${card.link}" class="inline-block mt-4 px-4 py-2 rounded-full bg-orange-500 hover:bg-orange-600 transition text-sm font-semibold shadow-lg shadow-orange-500/20">
+            SHOP NOW
+          </a>
         </div>
-    `;
-  container.innerHTML += cardHTML;
+      </div>
+    </div>
+  `;
+
+  container.appendChild(cardDiv);
 });
 
 // slider

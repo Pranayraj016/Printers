@@ -73,7 +73,7 @@
               href="#"
               class="text-white hover:text-gray-300 flex items-center space-x-1"
             >
-              <span>Printers</span>
+              <span>Products</span>
               <svg
                 class="w-3 h-3 transform group-hover:rotate-180 transition-transform duration-300"
                 fill="none"
@@ -182,7 +182,7 @@
       >
         <a href="index.html" class="text-white text-lg">Home</a>
         <a href="About.html" class="text-white text-lg">About</a>
-        <a href="Printers.html" class="text-white text-lg">Printers</a>
+        <a href="Printers.html" class="text-white text-lg">Products</a>
         <a href="MyAccount.html" class="text-white text-lg">My Account</a>
         <a href="Cart.html" class="text-white text-lg">Cart</a>
         <a href="Contact.html" class="text-white text-lg">Contact Us</a>
@@ -191,28 +191,98 @@
 
     <!-- Banner -->
 
-    <div
-      class="relative w-full overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
-      id="carouselWrapper"
-    >
-      <div id="carousel" class="flex w-max">
-        <img
-          src="./img/banner1.png"
-          alt="Banner 1"
-          class="w-screen flex-shrink-0 snap-start"
-        />
-        <img
-          src="./img/banner2.png"
-          alt="Banner 2"
-          class="w-screen flex-shrink-0 snap-start"
-        />
-        <img
-          src="./img/banner3.png"
-          alt="Banner 3"
-          class="w-screen flex-shrink-0 snap-start"
-        />
+    <div class="relative w-full mx-auto overflow-hidden rounded-3xl shadow-2xl">
+      <!-- Carousel Wrapper -->
+      <div
+        id="carouselWrapper"
+        class="overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide flex"
+      >
+        <!-- Carousel Track -->
+        <div id="carousel" class="flex w-max">
+          <!-- Slide 1 -->
+          <div class="relative w-screen flex-shrink-0 snap-start">
+            <img
+              src="./img/banner1.png"
+              alt="Banner 1"
+              class="w-full h-auto object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center px-10"
+            >
+              <div class="text-white max-w-md animate-fade-in">
+                <h2 class="text-2xl md:text-4xl font-bold mb-2">
+                  High-Performance Printers
+                </h2>
+                <p class="text-base md:text-lg">
+                  Quality you can trust for your home office.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="relative w-screen flex-shrink-0 snap-start">
+            <img
+              src="./img/banner2.png"
+              alt="Banner 2"
+              class="w-full h-auto object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-l from-black/60 to-transparent flex items-center px-10"
+            >
+              <div class="text-white ml-auto max-w-md animate-fade-in">
+                <h2 class="text-2xl md:text-4xl font-bold mb-2">
+                  Print Anytime, Anywhere
+                </h2>
+                <p class="text-base md:text-lg">
+                  Wireless printers for flexible work setups.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="relative w-screen flex-shrink-0 snap-start">
+            <img
+              src="./img/banner3.png"
+              alt="Banner 3"
+              class="w-full h-auto object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center px-10"
+            >
+              <div class="text-white max-w-md animate-fade-in">
+                <h2 class="text-2xl md:text-4xl font-bold mb-2">
+                  Smart Solutions
+                </h2>
+                <p class="text-base md:text-lg">
+                  Eco-friendly and efficient printing systems.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dots Navigation -->
+      <div
+        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3 z-10"
+      >
+        <button
+          class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition"
+          onclick="scrollToSlide(0)"
+        ></button>
+        <button
+          class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition"
+          onclick="scrollToSlide(1)"
+        ></button>
+        <button
+          class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition"
+          onclick="scrollToSlide(2)"
+        ></button>
       </div>
     </div>
+
     <!-- shipping -->
     <section class="bg-[#f8f4f1] py-12">
       <div class="container mx-auto px-6">
@@ -247,8 +317,8 @@
             </svg>
             <h3 class="text-lg font-bold mt-4">Free Shipping</h3>
             <p class="text-gray-700 mt-2 max-w-xs">
-              Provide free shipping for qualifying orders to encourage purchases
-              and reduce shopping cart abandonment.
+              Offer complimentary shipping on eligible orders to boost sales and
+              minimize cart abandonment.
             </p>
           </div>
 
@@ -282,8 +352,9 @@
               </svg>
               <h3 class="text-lg font-bold mt-4">Security</h3>
               <p class="text-gray-700 mt-2 max-w-xs">
-                Implement robust security measures like SSL encryption to
-                safeguard customer data and online transactions.
+                Use advanced security protocols, such as SSL encryption, to
+                protect customer information and ensure safe online
+                transactions.
               </p>
             </div>
           </section>
@@ -353,8 +424,8 @@
             </svg>
             <h3 class="text-lg font-bold mt-4">Support</h3>
             <p class="text-gray-700 mt-2 max-w-xs">
-              Provide comprehensive customer support through phone, email, and
-              live chat for responsive and effective customer service.
+              Deliver reliable customer service by offering support via phone,
+              email, and live chat to ensure quick and effective assistance.
             </p>
           </div>
         </div>
@@ -365,27 +436,30 @@
       <div class="flex flex-col sm:flex-row max-w-full sm:max-w-6xl mx-auto">
         <div class="sm:w-1/3 sm:pr-8">
           <h1 class="text-5xl font-bold leading-tight">
-            Top Printer Picks for Home Offices in 2024
+            Top-Rated Printers for Home Office Use in 2025
           </h1>
         </div>
         <div class="sm:w-2/3 space-y-4 text-lg text-gray-700">
           <p>
-            In today’s digital world, it’s important to choose the right printer
-            for your home office. High-quality and efficient equipment is in
-            high demand, so choose wisely. Printers are essential tools for both
-            work and personal use. They help with tasks like printing documents
-            and photos.
+            In today’s digital age, having the right printer for your home
+            office is essential. With the growing need for high-quality and
+            efficient devices, selecting a reliable printer can make a big
+            difference in your daily workflow. From printing important documents
+            to vibrant photos, a dependable printer is a must-have for both work
+            and personal tasks.
           </p>
           <p>
-            Choosing the right printer from many options, including the newest
-            models, can be overwhelming. We focus on laser printers, HP
-            printers, and HP wireless printer models.
+            With so many choices on the market—including the latest
+            models—finding the perfect fit can feel overwhelming. That’s why
+            we’re focusing on top-performing options like laser printers, HP
+            printers, and HP wireless models, which are known for their
+            reliability and performance.
           </p>
           <p>
-            These technologies enhance productivity and convenience in home
-            offices. Laser printers, HP printers, and HP wireless printer models
-            demonstrate how technology can improve efficiency. They are
-            especially beneficial for home office settings.
+            These technologies bring convenience and productivity to your home
+            office setup. Whether you need speed, wireless capabilities, or
+            crisp print quality, laser and HP printers stand out as excellent
+            choices for modern remote work environments.
           </p>
         </div>
       </div>
@@ -399,106 +473,146 @@
       </div>
     </section>
     <!-- feature product -->
-    <section class="py-10 max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-6">Featured Products</h2>
-      <div class="border-b-2 border-orange-500 w-20 mx-auto mb-8"></div>
+    <section class="py-16 max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-4">
+        Featured Products
+      </h2>
+      <div class="w-24 h-1 bg-orange-500 mx-auto mb-12 rounded"></div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-        <!-- Product 1 -->
-        <a href="Printers.html">
-          <div class="bg-white p-4 rounded-lg shadow-lg relative">
-            <span
-              class="absolute top-2 right-2 bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded-full"
-              >Sale!</span
-            >
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Product Card Template -->
+        <a
+          href="Printers.html"
+          class="group relative block bg-gradient-to-br from-white/70 to-white/50 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-orange-400/30 transition-all duration-500 overflow-hidden"
+        >
+          <span
+            class="absolute top-3 right-3 z-10 bg-orange-500/90 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md animate-pulse"
+            >SALE</span
+          >
+
+          <div class="overflow-hidden rounded-t-3xl">
             <img
               src="https://sunprinters.net/wp-content/uploads/2024/05/A-HP-LaserJet-Enterprise-MFP-M636fh-600x600.jpg"
-              alt="Printer 1"
-              class="w-full h-52 object-contain"
+              alt="HP LaserJet Enterprise"
+              class="w-full h-56 object-contain transition-transform duration-500 group-hover:scale-105"
             />
-            <h3 class="mt-4 text-lg font-semibold">
+          </div>
+
+          <div class="p-5">
+            <h3
+              class="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
+            >
               HP LaserJet Enterprise MFP M636fh
             </h3>
-            <p class="text-gray-500 text-sm">Laser Printers</p>
-            <p class="mt-2 text-gray-500 line-through">$3,999.99</p>
-            <p class="text-lg font-bold text-gray-900">$3,819.99</p>
-          </div></a
-        >
-
-        <!-- Product 2 -->
-        <a href="Printers.html">
-          <div class="bg-white p-4 rounded-lg shadow-lg relative">
-            <span
-              class="absolute top-2 right-2 bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded-full"
-              >Sale!</span
-            >
-            <img
-              src="https://sunprinters.net/wp-content/uploads/2024/05/A-HP-Color-LaserJet-Pro-3201dw.jpg"
-              alt="Printer 2"
-              class="w-full h-52 object-contain"
-            />
-            <h3 class="mt-4 text-lg font-semibold">
-              HP Color LaserJet Pro 3201dw Printer
-            </h3>
-            <p class="text-gray-500 text-sm">Home & Office Printers</p>
-            <p class="mt-2 text-gray-500 line-through">$339.99</p>
-            <p class="text-lg font-bold text-gray-900">$259.00</p>
+            <p class="text-gray-500 text-sm mb-1">Laser Printers</p>
+            <p class="text-sm line-through text-gray-400">$3,999.99</p>
+            <p class="text-xl font-bold text-gray-900">$3,819.99</p>
           </div>
         </a>
 
-        <!-- Product 3 --><a href="Printers.html">
-          <div class="bg-white p-4 rounded-lg shadow-lg relative">
-            <span
-              class="absolute top-2 right-2 bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded-full"
-              >Sale!</span
+        <!-- Repeat for Product 2 -->
+        <a
+          href="Printers.html"
+          class="group relative block bg-gradient-to-br from-white/70 to-white/50 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-orange-400/30 transition-all duration-500 overflow-hidden"
+        >
+          <span
+            class="absolute top-3 right-3 z-10 bg-orange-500/90 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md animate-pulse"
+            >SALE</span
+          >
+
+          <div class="overflow-hidden rounded-t-3xl">
+            <img
+              src="https://sunprinters.net/wp-content/uploads/2024/05/A-HP-Color-LaserJet-Pro-3201dw.jpg"
+              alt="HP Color LaserJet Pro"
+              class="w-full h-56 object-contain transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+
+          <div class="p-5">
+            <h3
+              class="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
             >
+              HP Color LaserJet Pro 3201dw
+            </h3>
+            <p class="text-gray-500 text-sm mb-1">Home & Office Printers</p>
+            <p class="text-sm line-through text-gray-400">$339.99</p>
+            <p class="text-xl font-bold text-gray-900">$259.00</p>
+          </div>
+        </a>
+
+        <!-- Product 3 -->
+        <a
+          href="Printers.html"
+          class="group relative block bg-gradient-to-br from-white/70 to-white/50 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-orange-400/30 transition-all duration-500 overflow-hidden"
+        >
+          <span
+            class="absolute top-3 right-3 z-10 bg-orange-500/90 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md animate-pulse"
+            >SALE</span
+          >
+
+          <div class="overflow-hidden rounded-t-3xl">
             <img
               src="https://sunprinters.net/wp-content/uploads/2024/05/A-HP-Color-LaserJet-Pro-MFP-3301fdw-600x600.jpg"
-              alt="Printer 3"
-              class="w-full h-52 object-contain"
+              alt="HP MFP 3301fdw"
+              class="w-full h-56 object-contain transition-transform duration-500 group-hover:scale-105"
             />
-            <h3 class="mt-4 text-lg font-semibold">
+          </div>
+
+          <div class="p-5">
+            <h3
+              class="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
+            >
               HP Color LaserJet Pro MFP 3301fdw
             </h3>
-            <p class="text-gray-500 text-sm">Home & Office Printers</p>
-            <p class="mt-2 text-gray-500 line-through">$540.99</p>
-            <p class="text-lg font-bold text-gray-900">$529.99</p>
-          </div></a
-        >
+            <p class="text-gray-500 text-sm mb-1">Home & Office Printers</p>
+            <p class="text-sm line-through text-gray-400">$540.99</p>
+            <p class="text-xl font-bold text-gray-900">$529.99</p>
+          </div>
+        </a>
 
         <!-- Product 4 -->
-        <a href="Printers.html">
-          <div class="bg-white p-4 rounded-lg shadow-lg relative">
-            <span
-              class="absolute top-2 right-2 bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded-full"
-              >Sale!</span
-            >
+        <a
+          href="Printers.html"
+          class="group relative block bg-gradient-to-br from-white/70 to-white/50 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-orange-400/30 transition-all duration-500 overflow-hidden"
+        >
+          <span
+            class="absolute top-3 right-3 z-10 bg-orange-500/90 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md animate-pulse"
+            >SALE</span
+          >
+
+          <div class="overflow-hidden rounded-t-3xl">
             <img
               src="https://sunprinters.net/wp-content/uploads/2024/05/A-HP-Smart-Tank-7602-600x600.jpg"
-              alt="Printer 4"
-              class="w-full h-52 object-contain"
+              alt="HP Smart Tank 7602"
+              class="w-full h-56 object-contain transition-transform duration-500 group-hover:scale-105"
             />
-            <h3 class="mt-4 text-lg font-semibold">
+          </div>
+
+          <div class="p-5">
+            <h3
+              class="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
+            >
               HP Smart Tank 7602 Dark Surf Blue
             </h3>
-            <p class="text-gray-500 text-sm">InkJet Printers</p>
-            <p class="mt-2 text-gray-500 line-through">$355.99</p>
-            <p class="text-lg font-bold text-gray-900">$349.99</p>
-          </div></a
-        >
+            <p class="text-gray-500 text-sm mb-1">InkJet Printers</p>
+            <p class="text-sm line-through text-gray-400">$355.99</p>
+            <p class="text-xl font-bold text-gray-900">$349.99</p>
+          </div>
+        </a>
       </div>
     </section>
+
     <!-- key features -->
     <section class="max-w-7xl mx-auto py-16 px-6">
       <h2 class="text-4xl font-bold text-center text-gray-900">
-        Key Features to Look For
+        What to Look for in a Home Office Printer in 2024
       </h2>
 
       <p class="mt-4 text-center text-gray-600 max-w-3xl mx-auto">
-        In 2024, when buying a new printer for your home office, ensure it has
-        key features that enhance performance, usability, and security. This
-        guide highlights the must-have features for an efficient and modern
-        printing experience.
+        Choosing the right printer means more than just picking a brand — it’s
+        about finding features that support productivity, ease of use, and
+        security. Here are the top essentials to consider for a smarter and more
+        efficient printing experience
       </p>
 
       <!-- Features Grid -->
@@ -509,11 +623,14 @@
             <i class="fas fa-print"></i>
           </div>
           <div>
-            <h3 class="text-2xl font-semibold text-gray-900">Print Quality</h3>
+            <h3 class="text-2xl font-semibold text-gray-900">
+              Exceptional Print Quality
+            </h3>
             <p class="text-gray-700 mt-2">
-              High-resolution printers with at least 1200 DPI for monochrome and
-              4800 DPI for color ensure crisp and vibrant prints, essential for
-              professionals in design and photography.
+              Opt for printers with high-resolution capabilities — at least 1200
+              DPI for black-and-white and 4800 DPI for color. This is crucial
+              for professionals handling graphics, photos, or detailed
+              documents.
             </p>
           </div>
         </div>
@@ -524,11 +641,14 @@
             <i class="fas fa-user-check"></i>
           </div>
           <div>
-            <h3 class="text-2xl font-semibold text-gray-900">Ease of Use</h3>
+            <h3 class="text-2xl font-semibold text-gray-900">
+              User-Friendly Interface
+            </h3>
             <p class="text-gray-700 mt-2">
-              Look for intuitive touchscreens, automatic document feeders (ADF),
-              and duplex scanning for seamless operations. Modern printers like
-              the HP OfficeJet Pro offer guided setups.
+              Simplify your workflow with easy-to-navigate touchscreens,
+              automatic document feeders (ADF), and duplex (double-sided)
+              printing and scanning. Models like the HP OfficeJet Pro come with
+              step-by-step setup guides to get you started quickly.
             </p>
           </div>
         </div>
@@ -540,12 +660,13 @@
           </div>
           <div>
             <h3 class="text-2xl font-semibold text-gray-900">
-              Security Features
+              Built-In Security
             </h3>
             <p class="text-gray-700 mt-2">
-              Secure printing, password protection, and encryption help
-              safeguard sensitive documents. Authentication protocols ensure
-              only authorized access to confidential prints.
+              Protect sensitive data with features like secure print release,
+              password-protected jobs, and encrypted connections. Authentication
+              systems add an extra layer of control, keeping your documents safe
+              from unauthorized access.
             </p>
           </div>
         </div>
@@ -557,12 +678,13 @@
           </div>
           <div>
             <h3 class="text-2xl font-semibold text-gray-900">
-              Mobile & Wireless Printing
+              Seamless Mobile & Wireless Connectivity
             </h3>
             <p class="text-gray-700 mt-2">
-              Printers with Wi-Fi and Bluetooth enable easy printing from
-              smartphones and laptops. Compatibility with mobile printing apps
-              adds convenience and boosts productivity.
+              Go wireless with built-in Wi-Fi, Bluetooth, or even NFC for
+              instant printing from your phone, tablet, or laptop. Support for
+              apps like Apple AirPrint, Google Cloud Print, and HP Smart makes
+              printing on the go a breeze.
             </p>
           </div>
         </div>
@@ -609,25 +731,23 @@
             <summary
               class="font-semibold text-lg flex justify-between items-center cursor-pointer"
             >
-              What are the top recommended printers for home use in 2024?
+              Which printers are best suited for home use in 2024?
               <span
                 class="text-orange-500 group-open:rotate-180 transition-transform"
                 >&#x25BE;</span
               >
             </summary>
             <p class="mt-2 text-gray-700 leading-relaxed">
-              For those looking to outfit their home office in 2024, the
-              following printers come highly recommended:
-              <br /><strong>Best Overall Home Printer:</strong> Epson EcoTank
-              Photo ET-8500 <br /><strong>Top Upper Mid-Range Choice:</strong>
-              HP Smart Tank 7602 <br /><strong
-                >Leading Mid-Range Option:</strong
+              If you're setting up a home office in 2024, these top-rated
+              printers are worth considering:
+              <br /><strong>Best Overall:</strong> Epson EcoTank Photo ET-8500
+              <br /><strong>Best Upper Mid-Range Model:</strong> HP Smart Tank
+              7602 <br /><strong>Top Mid-Range Choice:</strong> Brother
+              MFC-J4335DW <br /><strong>Best Budget Option:</strong> Brother
+              MFC-J1205W / MFC-J1215W <br /><strong
+                >Best Value Laser Printer:</strong
               >
-              Brother MFC-J4335DW <br /><strong>Best on a Budget:</strong>
-              Brother MFC-J1205W/MFC-J1215W <br /><strong
-                >Most Affordable Pick:</strong
-              >
-              Best Laser Printer for Home Offices.
+              Ideal for affordable, high-volume home office printing.
             </p>
           </details>
         </div>
@@ -638,18 +758,18 @@
             <summary
               class="font-semibold text-lg flex justify-between items-center cursor-pointer"
             >
-              Which type of printer should I choose for my home office?
+              What's the best type of printer for a home office?
               <span
                 class="text-orange-500 group-open:rotate-180 transition-transform"
                 >&#x25BE;</span
               >
             </summary>
             <p class="mt-2 text-gray-700 leading-relaxed">
-              Inkjet printers are often the go-to choice for home offices. They
-              are well-suited for a variety of printing tasks, especially for
-              users who print infrequently but require high-quality color
-              prints. Their versatility and widespread availability make them a
-              favored option among home users.
+              Inkjet printers are a popular choice for home offices due to their
+              ability to handle a wide range of tasks. They’re especially great
+              for occasional use and producing high-quality color prints. Their
+              flexibility and affordability make them a go-to for many home
+              users.
             </p>
           </details>
         </div>
@@ -660,24 +780,24 @@
             <summary
               class="font-semibold text-lg flex justify-between items-center cursor-pointer"
             >
-              What printers are best suited for home-based businesses?
+              Which printers are ideal for home-based businesses?
               <span
                 class="text-orange-500 group-open:rotate-180 transition-transform"
                 >&#x25BE;</span
               >
             </summary>
             <p class="mt-2 text-gray-700 leading-relaxed">
-              For small or home-based businesses, the following printers are top
-              contenders:
+              If you're running a small or home-based business, consider these
+              reliable and efficient models:
               <br /><strong>HP Color LaserJet Enterprise MFP M480f</strong>
               <br /><strong>Canon PIXMA TR7520</strong> <br /><strong
                 >Brother MFCL2750DW</strong
               >
               <br /><strong>HP OfficeJet Pro 9025</strong> <br /><strong
-                >HP OfficeJet Pro 9015e All-in-One Printer</strong
+                >HP OfficeJet Pro 9015e All-in-One</strong
               >
-              <br />Choosing the best printer depends on the specific needs,
-              printing volume, and budget of your business.
+              <br />The right choice will depend on your printing volume,
+              feature needs, and overall budget.
             </p>
           </details>
         </div>
