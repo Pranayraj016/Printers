@@ -107,3 +107,5 @@ var swiper = new Swiper(".brand-slider", {
     1024: { slidesPerView: 4 },
   },
 });
+
+// Product pages

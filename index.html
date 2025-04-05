@@ -73,7 +73,7 @@
               href="#"
               class="text-white hover:text-gray-300 flex items-center space-x-1"
             >
-              <span>Products</span>
+              <span>Printers</span>
               <svg
                 class="w-3 h-3 transform group-hover:rotate-180 transition-transform duration-300"
                 fill="none"
@@ -195,7 +195,7 @@
       <!-- Carousel Wrapper -->
       <div
         id="carouselWrapper"
-        class="overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide flex"
+        class="overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide flex rounded-xl relative"
       >
         <!-- Carousel Track -->
         <div id="carousel" class="flex w-max">
@@ -204,18 +204,20 @@
             <img
               src="./img/banner1.png"
               alt="Banner 1"
-              class="w-full h-auto object-cover"
+              class="w-full object-cover rounded-xl"
             />
             <div
-              class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center px-10"
+              class="hidden sm:flex absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center px-10 rounded-r-xl"
             >
               <div class="text-white max-w-md animate-fade-in">
-                <h2 class="text-2xl md:text-4xl font-bold mb-2">
-                  High-Performance Printers
-                </h2>
-                <p class="text-base md:text-lg">
-                  Quality you can trust for your home office.
-                </p>
+                <div>
+                  <h2 class="text-2xl md:text-4xl font-bold mb-2">
+                    High-Performance Printers
+                  </h2>
+                  <p class="text-base md:text-lg">
+                    Quality you can trust for your home office.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -225,18 +227,20 @@
             <img
               src="./img/banner2.png"
               alt="Banner 2"
-              class="w-full h-auto object-cover"
+              class="w-full h-auto object-cover rounded-xl"
             />
             <div
-              class="absolute inset-0 bg-gradient-to-l from-black/60 to-transparent flex items-center px-10"
+              class="hidden sm:flex absolute inset-0 bg-gradient-to-l from-black/60 to-transparent flex items-center px-10 rounded-l-xl"
             >
               <div class="text-white ml-auto max-w-md animate-fade-in">
-                <h2 class="text-2xl md:text-4xl font-bold mb-2">
-                  Print Anytime, Anywhere
-                </h2>
-                <p class="text-base md:text-lg">
-                  Wireless printers for flexible work setups.
-                </p>
+                <div>
+                  <h2 class="text-2xl md:text-4xl font-bold mb-2">
+                    Print Anytime, Anywhere
+                  </h2>
+                  <p class="text-base md:text-lg">
+                    Wireless printers for flexible work setups.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -246,18 +250,20 @@
             <img
               src="./img/banner3.png"
               alt="Banner 3"
-              class="w-full h-auto object-cover"
+              class="w-full h-auto object-cover rounded-xl"
             />
             <div
-              class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center px-10"
+              class="hidden sm:flex absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center px-10 rounded-r-xl"
             >
               <div class="text-white max-w-md animate-fade-in">
-                <h2 class="text-2xl md:text-4xl font-bold mb-2">
-                  Smart Solutions
-                </h2>
-                <p class="text-base md:text-lg">
-                  Eco-friendly and efficient printing systems.
-                </p>
+                <div>
+                  <h2 class="text-2xl md:text-4xl font-bold mb-2">
+                    Smart Solutions
+                  </h2>
+                  <p class="text-base md:text-lg">
+                    Eco-friendly and efficient printing systems.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -265,8 +271,8 @@
       </div>
 
       <!-- Dots Navigation -->
-      <div
-        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3 z-10"
+      <!-- <div
+        class="hidden sm:flex bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3 z-10"
       >
         <button
           class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition"
@@ -280,13 +286,12 @@
           class="w-3 h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition"
           onclick="scrollToSlide(2)"
         ></button>
-      </div>
+      </div> -->
     </div>
-
     <!-- shipping -->
     <section class="bg-[#f8f4f1] py-12">
-      <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-row justify-center gap-12 items-center px-4">
           <!-- Free Shipping -->
           <div class="flex flex-col items-center">
             <svg
@@ -297,7 +302,7 @@
               xmlns:xlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 612 612"
               xml:space="preserve"
-              class="w-12"
+              class="w-8 sm:w-12"
             >
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g
@@ -315,49 +320,46 @@
                 </g>
               </g>
             </svg>
-            <h3 class="text-lg font-bold mt-4">Free Shipping</h3>
-            <p class="text-gray-700 mt-2 max-w-xs">
+            <h3 class="text-sm sm:text-lg font-bold mt-4">Free Shipping</h3>
+            <p class="text-gray-700 mt-2 max-w-xs hidden sm:block">
               Offer complimentary shipping on eligible orders to boost sales and
               minimize cart abandonment.
             </p>
           </div>
 
           <!-- Security -->
-          <section>
-            <div class="flex flex-col items-center">
-              <svg
-                fill="#000000"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 330 330"
-                xml:space="preserve"
-                class="w-12"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <g id="XMLID_509_">
-                    <path
-                      id="XMLID_510_"
-                      d="M65,330h200c8.284,0,15-6.716,15-15V145c0-8.284-6.716-15-15-15h-15V85c0-46.869-38.131-85-85-85 S80,38.131,80,85v45H65c-8.284,0-15,6.716-15,15v170C50,323.284,56.716,330,65,330z M180,234.986V255c0,8.284-6.716,15-15,15 s-15-6.716-15-15v-20.014c-6.068-4.565-10-11.824-10-19.986c0-13.785,11.215-25,25-25s25,11.215,25,25 C190,223.162,186.068,230.421,180,234.986z M110,85c0-30.327,24.673-55,55-55s55,24.673,55,55v45H110V85z"
-                    ></path>
-                  </g>
+          <div class="flex flex-col items-center">
+            <svg
+              fill="#000000"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 330 330"
+              xml:space="preserve"
+              class="w-8 sm:w-12"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g id="XMLID_509_">
+                  <path
+                    id="XMLID_510_"
+                    d="M65,330h200c8.284,0,15-6.716,15-15V145c0-8.284-6.716-15-15-15h-15V85c0-46.869-38.131-85-85-85 S80,38.131,80,85v45H65c-8.284,0-15,6.716-15,15v170C50,323.284,56.716,330,65,330z M180,234.986V255c0,8.284-6.716,15-15,15 s-15-6.716-15-15v-20.014c-6.068-4.565-10-11.824-10-19.986c0-13.785,11.215-25,25-25s25,11.215,25,25 C190,223.162,186.068,230.421,180,234.986z M110,85c0-30.327,24.673-55,55-55s55,24.673,55,55v45H110V85z"
+                  ></path>
                 </g>
-              </svg>
-              <h3 class="text-lg font-bold mt-4">Security</h3>
-              <p class="text-gray-700 mt-2 max-w-xs">
-                Use advanced security protocols, such as SSL encryption, to
-                protect customer information and ensure safe online
-                transactions.
-              </p>
-            </div>
-          </section>
+              </g>
+            </svg>
+            <h3 class="text-sm sm:text-lg font-bold mt-4">Security</h3>
+            <p class="text-gray-700 mt-2 max-w-xs hidden sm:block">
+              Use advanced security protocols, such as SSL encryption, to
+              protect customer information and ensure safe online transactions.
+            </p>
+          </div>
 
           <!-- Support -->
           <div class="flex flex-col items-center">
@@ -369,7 +371,7 @@
               xmlns:xlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 315.377 315.377"
               xml:space="preserve"
-              class="w-12"
+              class="w-7 sm:w-12"
             >
               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
               <g
@@ -422,24 +424,35 @@
                 </g>
               </g>
             </svg>
-            <h3 class="text-lg font-bold mt-4">Support</h3>
-            <p class="text-gray-700 mt-2 max-w-xs">
-              Deliver reliable customer service by offering support via phone,
-              email, and live chat to ensure quick and effective assistance.
+            <h3 class="text-sm sm:text-lg font-bold mt-4">Support</h3>
+            <p class="text-gray-700 mt-2 max-w-xs hidden sm:block">
+              Get 24/7 customer support through multiple channels to assist with
+              inquiries and issues.
             </p>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Top Printer Picks for Home Offices in 2024 -->
-    <section class="p-6">
-      <div class="flex flex-col sm:flex-row max-w-full sm:max-w-6xl mx-auto">
-        <div class="sm:w-1/3 sm:pr-8">
-          <h1 class="text-5xl font-bold leading-tight">
-            Top-Rated Printers for Home Office Use in 2025
+    <section class="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 items-start"
+      >
+        <!-- Heading -->
+        <div class="sm:col-span-1">
+          <h1
+            class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight"
+          >
+            Top-Rated Printers for <br class="hidden sm:block" />
+            Home Office Use in 2025
           </h1>
         </div>
-        <div class="sm:w-2/3 space-y-4 text-lg text-gray-700">
+
+        <!-- Description -->
+        <div
+          class="sm:col-span-2 space-y-6 text-gray-700 text-base sm:text-lg leading-relaxed"
+        >
           <p>
             In today’s digital age, having the right printer for your home
             office is essential. With the growing need for high-quality and
@@ -464,6 +477,7 @@
         </div>
       </div>
     </section>
+
     <section class="p-6">
       <div
         id="card-container"
@@ -473,130 +487,144 @@
       </div>
     </section>
     <!-- feature product -->
-    <section class="py-16 max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-4">
-        Featured Products
-      </h2>
-      <div class="w-24 h-1 bg-orange-500 mx-auto mb-12 rounded"></div>
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900">
+          Featured Products
+        </h2>
+        <div class="mt-2 w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+        <p class="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
+          Discover the best deals on top-rated printers designed for performance
+          and style.
+        </p>
+      </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Product Card Template -->
+      <div
+        class="mt-16 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+      >
+        <!-- Product Card -->
         <a
-          href="Printers.html"
-          class="group relative block bg-gradient-to-br from-white/70 to-white/50 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-orange-400/30 transition-all duration-500 overflow-hidden"
+          href="Productpage.html?product=hp-laserjet-m636fh"
+          ...
+          class="group relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-orange-400"
         >
           <span
-            class="absolute top-3 right-3 z-10 bg-orange-500/90 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md animate-pulse"
-            >SALE</span
+            class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md animate-pulse z-10"
           >
-
-          <div class="overflow-hidden rounded-t-3xl">
+            SALE
+          </span>
+          <div class="overflow-hidden">
             <img
               src="https://sunprinters.net/wp-content/uploads/2024/05/A-HP-LaserJet-Enterprise-MFP-M636fh-600x600.jpg"
               alt="HP LaserJet Enterprise"
-              class="w-full h-56 object-contain transition-transform duration-500 group-hover:scale-105"
+              class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </div>
-
-          <div class="p-5">
+          <div class="p-5 text-center">
             <h3
-              class="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
+              class="text-sm sm:text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
             >
               HP LaserJet Enterprise MFP M636fh
             </h3>
-            <p class="text-gray-500 text-sm mb-1">Laser Printers</p>
-            <p class="text-sm line-through text-gray-400">$3,999.99</p>
-            <p class="text-xl font-bold text-gray-900">$3,819.99</p>
+            <p class="text-xs sm:text-sm text-gray-500 mb-1">Laser Printers</p>
+            <p class="text-xs sm:text-sm text-gray-400 line-through">
+              $3,999.99
+            </p>
+            <p class="text-sm sm:text-xl font-bold text-gray-900">$3,819.99</p>
           </div>
         </a>
 
-        <!-- Repeat for Product 2 -->
+        <!-- Product 2 -->
         <a
-          href="Printers.html"
-          class="group relative block bg-gradient-to-br from-white/70 to-white/50 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-orange-400/30 transition-all duration-500 overflow-hidden"
+          href="Productpage.html?product=hp-color-laserjet-3201dw"
+          ...
+          class="group relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-orange-400"
         >
           <span
-            class="absolute top-3 right-3 z-10 bg-orange-500/90 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md animate-pulse"
-            >SALE</span
+            class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md animate-pulse z-10"
           >
-
-          <div class="overflow-hidden rounded-t-3xl">
+            SALE
+          </span>
+          <div class="overflow-hidden">
             <img
               src="https://sunprinters.net/wp-content/uploads/2024/05/A-HP-Color-LaserJet-Pro-3201dw.jpg"
               alt="HP Color LaserJet Pro"
-              class="w-full h-56 object-contain transition-transform duration-500 group-hover:scale-105"
+              class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </div>
-
-          <div class="p-5">
+          <div class="p-5 text-center">
             <h3
-              class="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
+              class="text-sm sm:text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
             >
               HP Color LaserJet Pro 3201dw
             </h3>
-            <p class="text-gray-500 text-sm mb-1">Home & Office Printers</p>
-            <p class="text-sm line-through text-gray-400">$339.99</p>
-            <p class="text-xl font-bold text-gray-900">$259.00</p>
+            <p class="text-xs sm:text-sm text-gray-500 mb-1">
+              Home & Office Printers
+            </p>
+            <p class="text-xs sm:text-sm text-gray-400 line-through">$339.99</p>
+            <p class="text-sm sm:text-xl font-bold text-gray-900">$259.00</p>
           </div>
         </a>
 
         <!-- Product 3 -->
         <a
-          href="Printers.html"
-          class="group relative block bg-gradient-to-br from-white/70 to-white/50 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-orange-400/30 transition-all duration-500 overflow-hidden"
+          href="Productpage.html?product=hp-color-mfp-3301fdw"
+          ...
+          class="group relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-orange-400"
         >
           <span
-            class="absolute top-3 right-3 z-10 bg-orange-500/90 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md animate-pulse"
-            >SALE</span
+            class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md animate-pulse z-10"
           >
-
-          <div class="overflow-hidden rounded-t-3xl">
+            SALE
+          </span>
+          <div class="overflow-hidden">
             <img
               src="https://sunprinters.net/wp-content/uploads/2024/05/A-HP-Color-LaserJet-Pro-MFP-3301fdw-600x600.jpg"
               alt="HP MFP 3301fdw"
-              class="w-full h-56 object-contain transition-transform duration-500 group-hover:scale-105"
+              class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </div>
-
-          <div class="p-5">
+          <div class="p-5 text-center">
             <h3
-              class="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
+              class="text-sm sm:text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
             >
               HP Color LaserJet Pro MFP 3301fdw
             </h3>
-            <p class="text-gray-500 text-sm mb-1">Home & Office Printers</p>
-            <p class="text-sm line-through text-gray-400">$540.99</p>
-            <p class="text-xl font-bold text-gray-900">$529.99</p>
+            <p class="text-xs sm:text-sm text-gray-500 mb-1">
+              Home & Office Printers
+            </p>
+            <p class="text-xs sm:text-sm text-gray-400 line-through">$540.99</p>
+            <p class="text-sm sm:text-xl font-bold text-gray-900">$529.99</p>
           </div>
         </a>
 
         <!-- Product 4 -->
         <a
-          href="Printers.html"
-          class="group relative block bg-gradient-to-br from-white/70 to-white/50 backdrop-blur-md rounded-3xl shadow-xl hover:shadow-orange-400/30 transition-all duration-500 overflow-hidden"
+          href="Productpage.html?product=hp-smart-tank-7602"
+          ...
+          class="group relative bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-orange-400"
         >
           <span
-            class="absolute top-3 right-3 z-10 bg-orange-500/90 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md animate-pulse"
-            >SALE</span
+            class="absolute top-3 right-3 bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md animate-pulse z-10"
           >
-
-          <div class="overflow-hidden rounded-t-3xl">
+            SALE
+          </span>
+          <div class="overflow-hidden">
             <img
               src="https://sunprinters.net/wp-content/uploads/2024/05/A-HP-Smart-Tank-7602-600x600.jpg"
               alt="HP Smart Tank 7602"
-              class="w-full h-56 object-contain transition-transform duration-500 group-hover:scale-105"
+              class="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </div>
-
-          <div class="p-5">
+          <div class="p-5 text-center">
             <h3
-              class="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
+              class="text-sm sm:text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition"
             >
               HP Smart Tank 7602 Dark Surf Blue
             </h3>
-            <p class="text-gray-500 text-sm mb-1">InkJet Printers</p>
-            <p class="text-sm line-through text-gray-400">$355.99</p>
-            <p class="text-xl font-bold text-gray-900">$349.99</p>
+            <p class="text-xs sm:text-sm text-gray-500 mb-1">InkJet Printers</p>
+            <p class="text-xs sm:text-sm text-gray-400 line-through">$355.99</p>
+            <p class="text-sm sm:text-xl font-bold text-gray-900">$349.99</p>
           </div>
         </a>
       </div>

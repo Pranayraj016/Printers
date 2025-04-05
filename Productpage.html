@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Printer Product Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-8">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- <div class="text-white text-lg font-bold">E-commerce</div> -->
+        <img src="./img/Logo.png" alt="logo" class="w-32" />
+        <!-- Hamburger / Close Icon Toggle Button (mobile only) -->
+        <button
+          id="menuToggle"
+          class="text-white md:hidden ml-auto relative z-20 mr-4"
+        >
+          <!-- Hamburger Icon -->
+          <svg
+            id="hamburgerIcon"
+            class="w-6 h-6 block"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+
+          <!-- Close Icon -->
+          <svg
+            id="closeIcon"
+            class="w-6 h-6 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center space-x-6">
+          <li>
+            <a href="index.html" class="text-white hover:text-gray-300">Home</a>
+          </li>
+          <li>
+            <a href="About.html" class="text-white hover:text-gray-300"
+              >About</a
+            >
+          </li>
+
+          <!-- Printers Dropdown -->
+          <li class="relative group">
+            <a
+              href="#"
+              class="text-white hover:text-gray-300 flex items-center space-x-1"
+            >
+              <span>Printers</span>
+              <svg
+                class="w-3 h-3 transform group-hover:rotate-180 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block bg-gray-200 text-black rounded-md shadow-lg mt-2 w-48 space-y-2 p-4 z-10"
+            >
+              <li>
+                <a href="Printers.html" class="block hover:text-blue-600"
+                  >Home & Office</a
+                >
+              </li>
+              <li>
+                <a href="Printers.html" class="block hover:text-blue-600"
+                  >Wireless Printers</a
+                >
+              </li>
+              <li>
+                <a href="Printers.html" class="block hover:text-blue-600"
+                  >All Products</a
+                >
+              </li>
+              <li>
+                <a href="Printers.html" class="block hover:text-blue-600"
+                  >Accessories</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="MyAccount.html" class="text-white hover:text-gray-300"
+              >My Account</a
+            >
+          </li>
+          <li>
+            <a href="Cart.html" class="text-white hover:text-gray-300">Cart</a>
+          </li>
+          <li>
+            <a href="Contact.html" class="text-white hover:text-gray-300"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+
+        <ul class="flex items-center space-x-4">
+          <!-- Cart Icon -->
+          <li>
+            <a
+              href="Cart.html"
+              class="text-white hover:text-gray-300 transition"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7.3 5H22L20 12H8.38M21 16H9L7 3H4M4 8H2M5 11H2M6 14H2M10 20a1 1 0 11-2 0 1 1 0 012 0zm11 0a1 1 0 11-2 0 1 1 0 012 0z"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </li>
+
+          <!-- User Icon -->
+          <li>
+            <a
+              href="MyAccount.html"
+              class="text-white hover:text-gray-300 transition"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="white"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path d="M8 7a3 3 0 100-6 3 3 0 000 6z" />
+                <path d="M14 12a3 3 0 00-3-3H5a3 3 0 00-3 3v3h12v-3z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="md:hidden flex flex-wrap gap-4 mt-4 text-white px-4 justify-center hidden"
+      >
+        <a href="index.html" class="text-white text-lg">Home</a>
+        <a href="About.html" class="text-white text-lg">About</a>
+        <a href="Printers.html" class="text-white text-lg">Products</a>
+        <a href="MyAccount.html" class="text-white text-lg">My Account</a>
+        <a href="Cart.html" class="text-white text-lg">Cart</a>
+        <a href="Contact.html" class="text-white text-lg">Contact Us</a>
+      </div>
+    </nav>
+    <div
+      class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mt-16 px-4 mb-12"
+    >
+      <!-- Image Gallery -->
+      <div class="relative bg-white p-6 rounded-xl shadow-lg">
+        <span
+          class="absolute -left-5 top-4 bg-orange-500 text-white text-xs px-3 py-1 rounded-full shadow-md"
+        >
+          Sale!
+        </span>
+        <img
+          id="mainImage"
+          class="w-full h-[400px] object-contain rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-zoom-in"
+          src=""
+          alt="Product Image"
+        />
+
+        <!-- Thumbnails -->
+        <div id="thumbnails" class="flex gap-4 mt-6 justify-center"></div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="bg-white p-6">
+        <nav class="text-sm text-gray-500 mb-4">
+          <a href="index.html" class="hover:underline">Home</a> /
+          <a href="Printers.html" class="hover:underline">Laser Printers</a> /
+          <span class="text-orange-500 font-medium" id="breadcrumbTitle"
+            >Loading...</span
+          >
+        </nav>
+
+        <h1 class="text-3xl font-semibold text-gray-800 mb-3" id="productTitle">
+          Loading...
+        </h1>
+
+        <div class="flex items-center gap-4 mb-5">
+          <span
+            class="text-gray-400 line-through text-xl price-original"
+          ></span>
+          <span class="text-2xl font-bold text-green-700 price-discount"></span>
+        </div>
+
+        <ul
+          id="featuresList"
+          class="text-gray-700 space-y-2 mb-6 text-sm leading-relaxed list-disc pl-5"
+        ></ul>
+
+        <!-- Quantity + Buttons -->
+        <div class="flex flex-wrap items-center gap-4 mb-6">
+          <div
+            class="flex items-center border border-gray-300 rounded-md overflow-hidden shadow-sm"
+          >
+            <button
+              class="bg-gray-100 px-3 py-2 text-lg font-semibold hover:bg-gray-200"
+              onclick="changeQty(-1)"
+            >
+              −
+            </button>
+            <input
+              id="qtyInput"
+              type="number"
+              value="1"
+              min="1"
+              class="w-14 text-center py-2 border-x border-gray-300 outline-none"
+            />
+            <button
+              class="bg-gray-100 px-3 py-2 text-lg font-semibold hover:bg-gray-200"
+              onclick="changeQty(1)"
+            >
+              +
+            </button>
+          </div>
+
+          <button
+            class="bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium px-6 py-2 rounded-md shadow"
+          >
+            Add to Cart
+          </button>
+          <button
+            class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-6 py-2 rounded-md shadow"
+          >
+            Buy Now
+          </button>
+        </div>
+
+        <p class="text-sm text-gray-500">
+          Category:
+          <a href="#" class="text-orange-500 hover:underline">Laser Printers</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Product Description -->
+    <div class="bg-white p-6 mt-12 rounded-lg shadow">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+        Product Description
+      </h2>
+      <p id="productDescription" class="text-gray-600 leading-relaxed">
+        <!-- Fetched via JS -->
+      </p>
+    </div>
+
+    <!-- Customer Reviews -->
+    <div class="bg-white p-6 mt-8 rounded-lg shadow">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+        Customer Reviews
+      </h2>
+      <div id="reviewsContainer" class="space-y-6">
+        <!-- Reviews will be injected here -->
+      </div>
+    </div>
+    <!-- JS Code -->
+    <script>
+      const products = {
+        "hp-laserjet-m636fh": {
+          title: "HP LaserJet Enterprise MFP M636fh",
+          priceOriginal: "$3,999.99",
+          priceDiscount: "$3,819.99",
+          category: "Laser Printers",
+          features: [
+            "Print, copy, scan, fax",
+            "Print speed letter: Up to 75 ppm (black)",
+            "2 paper trays; auto duplex; JetIntelligence toner",
+            "FCC Class A – commercial use only",
+            "Dynamic security enabled",
+          ],
+          images: [
+            "https://sunprinters.net/wp-content/uploads/2024/05/A-HP-LaserJet-Enterprise-MFP-M636fh-600x600.jpg",
+          ],
+          description: `
+  <div class="space-y-4">
+    <h4 class="text-lg font-semibold text-gray-800">Key Features</h4>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>High Performance Secure Hard Disk</li>
+      <li>9″ Touchscreen Display</li>
+      <li>Duplex Printing</li>
+      <li>300,000 Page Monthly Duty Cycle</li>
+      <li>75 ppm Print Speed</li>
+      <li>150-Sheet Automatic Document Feeder</li>
+    </ul>
+
+    <p>The HP LaserJet Enterprise MFP M636FH Multi-Function Printer is designed for small to medium businesses, as well as small workgroups in larger companies, delivering enhanced productivity, simplified workflows, and reduced costs. Boasting one of the industry’s most secure printing technologies, HP’s High Performance Secure Hard Disk ensures the safety of all your sensitive data and great storage capacity.</p>
+
+    <p>A staggering 300,000 page monthly duty cycle is complemented by a fast 75 ppm print speed, while the 150-sheet automatic document feeder enables higher multitasking in the workplace. A sleek 9″ touchscreen display makes these impressive capabilities easy to use with the simple touch of a finger.</p>
+
+    <h4 class="text-lg font-semibold text-gray-800">Secure Printing</h4>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>With HP Sure Start, operating code is automatically checked at startup and repairs itself if compromised.</li>
+      <li>Run-time intrusion detection continually monitors to detect and stop attacks, then automatically reboots.</li>
+      <li>Centralize control of your printing environment with HP Web JetAdmin to build business efficiency.</li>
+      <li>Easily choose and deploy hundreds of HP and third-party solutions for workgroup success.</li>
+    </ul>
+
+    <h4 class="text-lg font-semibold text-gray-800">High-Speed Performance Meets Energy Efficiency</h4>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>Speed through tasks and save paper with duplex printing.</li>
+      <li>Print two-sided documents nearly as fast as single-sided ones.</li>
+      <li>This MFP wakes up and prints your first page in as little as 8 seconds.</li>
+    </ul>
+
+    <h4 class="text-lg font-semibold text-gray-800">Performance and Protection You Can Count On</h4>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>Produce sharp text, bold blacks, and crisp graphics with precision black toner.</li>
+      <li>Help retain Original HP quality with anti-fraud and cartridge authentication technology.</li>
+      <li>Spend less time replacing toner and more on business with high-yield toner cartridges.</li>
+    </ul>
+
+    <h4 class="text-lg font-semibold text-gray-800">Give Workgroups the Speed They Need</h4>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>Enter data quickly and accurately with a pull-out keyboard.</li>
+      <li>Ensures every scanned document is properly oriented, cropped, and optimized.</li>
+      <li>Load up to 150 pages into the automatic document feeder for fast, unattended scanning.</li>
+    </ul>
+  </div>
+`,
+
+          reviews: [
+            {
+              user: "Jane",
+              text: "This printer is blazing fast and works flawlessly in our office!",
+            },
+            {
+              user: "Mark",
+              text: "Super reliable and the print quality is top-notch.",
+            },
+          ],
+        },
+
+        "hp-color-laserjet-3201dw": {
+          title: "HP Color LaserJet Pro 3201dw",
+          priceOriginal: "$339.99",
+          priceDiscount: "$259.00",
+          category: "Home & Office Printers",
+          features: [
+            "Wireless printing",
+            "Color laser technology",
+            "Compact design",
+            "Energy efficient",
+          ],
+          images: [
+            "https://sunprinters.net/wp-content/uploads/2024/05/A-HP-Color-LaserJet-Pro-3201dw.jpg",
+          ],
+          description: `
+  <div class="space-y-4">
+    <h4 class="text-lg font-semibold text-gray-800">Key Features</h4>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>Wireless Printing</li>
+      <li>Compact, Modern Design</li>
+      <li>High-Quality Color Output</li>
+      <li>Energy Efficient with Auto-On/Off Technology</li>
+    </ul>
+    <p>The HP Color LaserJet Pro 3201dw is a compact and powerful printer ideal for home or small office environments. It delivers vibrant color output with reliable laser technology while minimizing environmental impact thanks to its energy-saving features.</p>
+    <p>Its wireless capability allows printing from smartphones, tablets, or laptops without cables, and its small footprint fits neatly into any workspace without compromising performance.</p>
+  </div>
+    `,
+          reviews: [
+            {
+              user: "Jane",
+              text: "This printer is blazing fast and works flawlessly in our office!",
+            },
+            {
+              user: "Mark",
+              text: "Super reliable and the print quality is top-notch.",
+            },
+          ],
+        },
+
+        "hp-color-mfp-3301fdw": {
+          title: "HP Color LaserJet Pro MFP 3301fdw",
+          priceOriginal: "$540.99",
+          priceDiscount: "$529.99",
+          category: "Home & Office Printers",
+          features: [
+            "All-in-one functions",
+            "Wireless & Ethernet",
+            "Fast printing",
+            "Auto-duplex",
+          ],
+          images: [
+            "https://sunprinters.net/wp-content/uploads/2024/05/A-HP-Color-LaserJet-Pro-MFP-3301fdw-600x600.jpg",
+          ],
+          description: `
+  <div class="space-y-4">
+    <h4 class="text-lg font-semibold text-gray-800">Key Features</h4>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>Print, Copy, Scan, and Fax</li>
+      <li>Wireless and Ethernet Connectivity</li>
+      <li>Fast Color Printing</li>
+      <li>Automatic Duplex Printing</li>
+    </ul>
+    <p>The HP Color LaserJet Pro MFP 3301fdw is an all-in-one printer designed for small businesses and home offices. It offers powerful multitasking with print, scan, copy, and fax functionality all in a compact unit.</p>
+    <p>Thanks to dual-band Wi-Fi and Ethernet, it’s easy to integrate into your network, and the automatic duplex feature helps reduce paper usage without sacrificing performance or quality.</p>
+  </div>
+    `,
+          reviews: [
+            {
+              user: "Jane",
+              text: "This printer is blazing fast and works flawlessly in our office!",
+            },
+            {
+              user: "Mark",
+              text: "Super reliable and the print quality is top-notch.",
+            },
+          ],
+        },
+
+        "hp-smart-tank-7602": {
+          title: "HP Smart Tank 7602 Dark Surf Blue",
+          priceOriginal: "$355.99",
+          priceDiscount: "$349.99",
+          category: "InkJet Printers",
+          features: [
+            "Smart tank system",
+            "Wireless printing",
+            "High-yield ink bottles",
+            "Touchscreen control",
+          ],
+          images: [
+            "https://sunprinters.net/wp-content/uploads/2024/05/A-HP-Smart-Tank-7602-600x600.jpg",
+          ],
+          description: `
+  <div class="space-y-4">
+    <h4 class="text-lg font-semibold text-gray-800">Key Features</h4>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>Smart Ink Tank System with High-Yield Bottles</li>
+      <li>Wireless Printing with Mobile App Integration</li>
+      <li>Color Touchscreen for Easy Navigation</li>
+      <li>Eco-Friendly and Cost-Effective</li>
+    </ul>
+    <p>The HP Smart Tank 7602 offers exceptional value for high-volume printing needs with ultra-low-cost ink and wireless connectivity. Designed to minimize waste and maximize savings, it’s the ideal printer for eco-conscious users and small businesses.</p>
+    <p>Its large-capacity ink tanks and intelligent design allow hassle-free refilling and impressive output, while the built-in touchscreen makes operation smooth and intuitive.</p>
+  </div>
+    `,
+          reviews: [
+            {
+              user: "Jane",
+              text: "This printer is blazing fast and works flawlessly in our office!",
+            },
+            {
+              user: "Mark",
+              text: "Super reliable and the print quality is top-notch.",
+            },
+          ],
+        },
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const key = params.get("product");
+
+        if (!key || !products[key]) {
+          document.getElementById("productTitle").textContent =
+            "Product Not Found";
+          return;
+        }
+
+        const product = products[key];
+
+        // Titles & Prices
+        document.getElementById("productTitle").textContent = product.title;
+        document.getElementById("breadcrumbTitle").textContent = product.title;
+        document.querySelector(".price-original").textContent =
+          product.priceOriginal;
+        document.querySelector(".price-discount").textContent =
+          product.priceDiscount;
+
+        // Features
+        const featureList = document.getElementById("featuresList");
+        featureList.innerHTML = "";
+        product.features.forEach((feature) => {
+          const li = document.createElement("li");
+          li.className = "text-gray-700 list-disc list-inside";
+          li.textContent = feature;
+          featureList.appendChild(li);
+        });
+
+        // Images & Thumbnails
+        const mainImage = document.getElementById("mainImage");
+        const thumbnails = document.getElementById("thumbnails");
+        mainImage.src = product.images[0] || "";
+        thumbnails.innerHTML = "";
+
+        product.images.forEach((src) => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.setAttribute("data-src", src);
+          img.className =
+            "w-20 h-20 object-contain border-2 border-gray-300 rounded-lg cursor-pointer hover:border-orange-500 transition duration-200";
+          img.onclick = () => (mainImage.src = src);
+          thumbnails.appendChild(img);
+        });
+
+        // Description
+        document.getElementById("productDescription").innerHTML = `
+            <div class="bg-gradient-to-br from-blue-50 to-white border border-blue-200 text-blue-800 p-6 rounded-lg shadow-lg text-base leading-relaxed">
+              <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">
+                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8z" />
+                </svg>
+                Product Overview
+              </h3>
+              ${product.description}
+            </div>
+          `;
+
+        // Reviews
+        const reviewsContainer = document.getElementById("reviewsContainer");
+        reviewsContainer.innerHTML = "";
+
+        product.reviews.forEach((review, index) => {
+          const reviewCard = document.createElement("div");
+          reviewCard.className =
+            "bg-white border border-gray-100 p-5 rounded-2xl shadow-md flex flex-col sm:flex-row gap-4 sm:items-start transition hover:shadow-xl duration-300";
+
+          const avatar = `<img class="w-12 h-12 rounded-full object-cover border-2 border-orange-300 shadow-sm" src="https://i.pravatar.cc/150?img=${
+            index + 10
+          }" alt="User Avatar" />`;
+          const user = typeof review === "string" ? "User" : review.user;
+          const text = typeof review === "string" ? review : review.text;
+
+          reviewCard.innerHTML = `
+              ${avatar}
+              <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-semibold text-gray-800">${user}</span>
+                  <span class="text-sm text-gray-400">${new Date().toLocaleDateString()}</span>
+                </div>
+                <div class="text-yellow-400 mb-2 sm:mb-1">${"★".repeat(5)}</div>
+                <p class="text-gray-600 text-sm sm:text-base">${text}</p>
+              </div>
+            `;
+          reviewsContainer.appendChild(reviewCard);
+        });
+      });
+    </script>
+
+    <!-- footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Contact Banner -->
+        <div
+          class="bg-orange-500 text-white text-center p-5 rounded-lg mb-8 shadow-lg"
+        >
+          <p class="text-lg font-semibold">
+            Have any questions or requests? We're here to help!
+          </p>
+          <button
+            class="mt-3 px-6 py-3 bg-black text-white font-bold rounded-lg shadow-md hover:bg-gray-800 transition"
+          >
+            CHAT NOW
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <!-- Company Info -->
+          <div>
+            <!-- <h3 class="text-xl font-bold text-white">Sun Printers</h3> -->
+            <img src="./img/Logo.png" alt="logo" />
+            <p class="mt-3 text-sm">
+              Sun Printers offers a wide range of printers, computers, and IT
+              products globally. Shop online for the best deals.
+            </p>
+            <div class="flex space-x-4 mt-4">
+              <a
+                href="#"
+                class="text-blue-500 text-2xl hover:text-blue-400 transition"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="text-blue-400 text-2xl hover:text-blue-300 transition"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="text-blue-700 text-2xl hover:text-blue-600 transition"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="#"
+                class="text-pink-500 text-2xl hover:text-pink-400 transition"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Useful Links -->
+          <div>
+            <h3 class="text-lg font-bold text-white">Useful Links</h3>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li>
+                <a href="About.html" class="hover:text-orange-400 transition"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="Contact.html" class="hover:text-orange-400 transition"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-orange-400 transition">Blog</a>
+              </li>
+              <li>
+                <a href="Printers.html" class="hover:text-orange-400 transition"
+                  >All Products</a
+                >
+              </li>
+              <li>
+                <a href="Cart.html" class="hover:text-orange-400 transition"
+                  >Cart</a
+                >
+              </li>
+              <li>
+                <a href="Cart.html" class="hover:text-orange-400 transition"
+                  >Checkout</a
+                >
+              </li>
+              <li>
+                <a
+                  href="MyAccount.html"
+                  class="hover:text-orange-400 transition"
+                  >My Account</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Top Products -->
+          <div>
+            <h3 class="text-lg font-bold text-white">Top Products</h3>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li>
+                <a href="Printers.html" class="hover:text-orange-400 transition"
+                  >All-In-One Printers</a
+                >
+              </li>
+              <li>
+                <a href="Printers.html" class="hover:text-orange-400 transition"
+                  >Home & Office Printers</a
+                >
+              </li>
+              <li>
+                <a href="Printers.html" class="hover:text-orange-400 transition"
+                  >InkJet Printers</a
+                >
+              </li>
+              <li>
+                <a href="Printers.html" class="hover:text-orange-400 transition"
+                  >Laser Printers</a
+                >
+              </li>
+              <li>
+                <a href="Printers.html" class="hover:text-orange-400 transition"
+                  >Wireless Printers</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-lg font-bold text-white">Contact Us</h3>
+            <p class="mt-3 text-sm flex items-center">
+              <i class="fas fa-map-marker-alt mr-2"></i> 164 W 25th St 12th
+              Floor, New York, NY 10001
+            </p>
+            <p class="mt-2 text-sm flex items-center">
+              <i class="fas fa-envelope mr-2"></i> support@sunprinters.net
+            </p>
+            <p class="mt-2 text-sm flex items-center">
+              <i class="fas fa-phone mr-2"></i> +1 516 620-5332
+            </p>
+            <div class="mt-4 flex space-x-3">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+                alt="PayPal"
+                class="h-8"
+              />
+
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
+                alt="MasterCard"
+                class="h-8"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
