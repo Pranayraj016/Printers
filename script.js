@@ -81,7 +81,7 @@ cards.forEach((card) => {
         <div class="space-y-2">
           <h2 class="text-2xl font-extrabold tracking-tight">${card.title}</h2>
           <p class="text-sm leading-relaxed opacity-80">${card.description}</p>
-          <a href="${card.link}" class="inline-block mt-4 px-4 py-2 rounded-full bg-blue-600 hover:bg-orange-600 transition text-sm font-semibold shadow-lg shadow-orange-500/20">
+          <a href="${card.link}" class="inline-block mt-4 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 transition text-sm font-semibold shadow-lg shadow-blue-500/20">
             SHOP NOW
           </a>
         </div>
