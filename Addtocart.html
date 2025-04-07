@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Account</title>
+    <title>About</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -16,7 +16,7 @@
     <!-- Navbar -->
     <nav class="bg-gray-800 p-8">
       <div class="container mx-auto flex justify-between items-center">
-        <div class="text-white text-2xl font-bold">Smart Printers</div>
+        <div class="text-white text-lg font-bold">Smart Printers</div>
         <!-- <img src="./img/Logo.png" alt="logo" class="w-32" /> -->
         <!-- Hamburger / Close Icon Toggle Button (mobile only) -->
         <button
@@ -189,81 +189,110 @@
       </div>
     </nav>
 
-    <!-- My Account -->
-    <div class="bg-gray-900 text-white py-16">
+    <!-- About heading -->
+    <div class="bg-gray-900 text-white py-20">
       <div class="max-w-7xl mx-auto px-6">
-        <h1 class="text-4xl font-bold text-center">My Account</h1>
-        <p class="mt-4 text-center text-lg">Welcome to Smart Printers,</p>
+        <h1 class="text-4xl font-bold text-center">Checkout</h1>
       </div>
     </div>
-    <!-- login -->
-    <div class="flex justify-center items-center min-h-[600px] bg-gray-100">
-      <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 class="text-2xl font-bold mb-6">Login</h2>
 
-        <form action="#" method="POST">
-          <div class="mb-4">
-            <label class="block text-gray-700 font-medium mb-2"
-              >Username or email address
-              <span class="text-red-500">*</span></label
+    <!-- Checkout -->
+    <div
+      class="bg-green-100 text-green-800 text-center py-4 px-6 text-base font-medium"
+    >
+      ✅ Product successfully added! Please click on checkout and contact us.
+    </div>
+
+    <!-- Checkout Section -->
+    <div class="p-12 bg-gray-100 flex justify-center items-center">
+      <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl">
+        <!-- Cart Section -->
+        <div>
+          <div
+            class="bg-orange-100 text-orange-700 p-4 rounded mb-4 text-sm sm:text-base"
+          >
+            ✅ “HP Color LaserJet Pro 3201dw Printer” has been added to your
+            cart.
+          </div>
+
+          <!-- Responsive Table -->
+          <div class="overflow-x-auto">
+            <table
+              class="w-full border-collapse border border-gray-300 mb-4 text-sm sm:text-base"
             >
+              <thead>
+                <tr class="bg-gray-200">
+                  <th class="border p-2">Product</th>
+                  <th class="border p-2">Price</th>
+                  <th class="border p-2">Qty</th>
+                  <th class="border p-2">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border p-2 flex items-center">
+                    <img
+                      src="printer.png"
+                      alt="Printer"
+                      class="w-12 h-12 sm:w-16 sm:h-16 mr-2"
+                    />
+                    <span class="hidden sm:inline"
+                      >HP Color LaserJet Pro 3201dw Printer</span
+                    >
+                  </td>
+                  <td class="border p-2">$259.00</td>
+                  <td class="border p-2">
+                    <input
+                      type="number"
+                      value="1"
+                      class="w-10 sm:w-12 text-center border rounded"
+                    />
+                  </td>
+                  <td class="border p-2">$259.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Coupon & Checkout -->
+          <div
+            class="flex flex-col sm:flex-row sm:justify-between items-center"
+          >
             <input
               type="text"
-              class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              placeholder="Coupon code"
+              class="border p-2 rounded w-full sm:w-1/2 mb-2 sm:mb-0"
             />
-          </div>
-
-          <div class="mb-4 relative">
-            <label class="block text-gray-700 font-medium mb-2"
-              >Password <span class="text-red-500">*</span></label
+            <button
+              class="bg-blue-600 text-white px-4 py-2 rounded w-full sm:w-auto"
             >
-            <input
-              type="password"
-              class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
-            />
-            <span
-              class="absolute top-10 right-3 flex items-center cursor-pointer"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 64 64"
-              >
-                <g
-                  fill="none"
-                  stroke="black"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path
-                    d="M5 32s11-18 27-18 27 18 27 18-11 18-27 18S5 32 5 32Z"
-                  />
-                  <circle cx="32" cy="32" r="9" />
-                </g>
-              </svg>
-            </span>
+              APPLY COUPON
+            </button>
           </div>
 
-          <div class="mb-4 flex items-center">
-            <input type="checkbox" id="remember" class="mr-2" />
-            <label for="remember" class="text-gray-700">Remember me</label>
+          <div class="bg-gray-100 p-4 rounded mt-4">
+            <h3 class="text-lg font-semibold">Cart totals</h3>
+            <div class="flex justify-between mt-2">
+              <span>Subtotal:</span>
+              <span>$259.00</span>
+            </div>
+            <div class="flex justify-between mt-2">
+              <span>Total:</span>
+              <span class="font-bold">$259.00</span>
+            </div>
           </div>
 
-          <button
-            type="submit"
-            class="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900"
+          <a href="Contact.html"
+            ><button class="w-full bg-blue-600 text-white py-2 mt-4 rounded">
+              CHECKOUT
+            </button></a
           >
-            LOG IN
-          </button>
+        </div>
 
-          <div class="mt-4 text-center">
-            <a href="#" class="text-gray-900 hover:underline"
-              >Lost your password?</a
-            >
-          </div>
-        </form>
+        <!-- Add Product Button -->
+        <button class="mt-6 bg-green-600 text-white px-4 py-2 rounded w-full">
+          Add Product to Cart
+        </button>
       </div>
     </div>
 
