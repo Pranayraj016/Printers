@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Printers</title>
+    <title>Policies | SmartPrints</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -11,12 +11,15 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
-    <!-- Navbar -->
+  <body class="bg-gray-50 text-gray-800 font-sans">
     <nav class="bg-gray-800 p-8">
       <div class="container mx-auto flex justify-between items-center">
-        <div class="text-white text-lg font-bold">Smart Printers</div>
+        <div class="text-white text-2xl font-bold">Smart Printers</div>
         <!-- <img src="./img/Logo.png" alt="logo" class="w-32" /> -->
         <!-- Hamburger / Close Icon Toggle Button (mobile only) -->
         <button
@@ -188,242 +191,126 @@
         <a href="Contact.html" class="text-white text-lg">Contact Us</a>
       </div>
     </nav>
-
-    <div class="max-w-7xl mx-auto px-4 py-8">
-      <h1 class="text-3xl font-bold text-gray-800 mb-6">All Products</h1>
-
-      <div class="flex flex-col md:flex-row gap-6">
-        <!-- Sidebar -->
-        <aside class="w-full md:w-1/4 space-y-6">
-          <!-- Search & Filter -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <input
-              type="text"
-              placeholder="Search products..."
-              class="w-full p-2 border rounded mb-4"
-            />
-            <div>
-              <h3 class="font-semibold mb-2">Filter by Price</h3>
-              <input type="range" min="50" max="500" class="w-full" />
-            </div>
-            <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded">
-              Apply Filters
-            </button>
-          </div>
-
-          <!-- Categories -->
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="text-lg font-semibold mb-3">Categories</h3>
-            <ul class="space-y-2 text-gray-700">
-              <li>
-                <a href="Printers.html" class="hover:text-orange-500"
-                  >All Printers</a
-                >
-              </li>
-              <li>
-                <a href="Printers.html" class="hover:text-orange-500"
-                  >Laser Printers</a
-                >
-              </li>
-              <li>
-                <a href="Printers.html" class="hover:text-orange-500"
-                  >Inkjet Printers</a
-                >
-              </li>
-              <li>
-                <a href="Printers.html" class="hover:text-orange-500"
-                  >All-in-One</a
-                >
-              </li>
-              <li>
-                <a href="Printers.html" class="hover:text-orange-500"
-                  >Accessories</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- Best Sellers -->
-          <div class="bg-white p-6 rounded-lg shadow-md hidden md:block">
-            <h3 class="text-lg font-semibold mb-4">Best Sellers</h3>
-            <div class="space-y-4">
-              <div class="flex items-center gap-4">
-                <img
-                  src="./img/printer2.png"
-                  alt="Best Seller"
-                  class="w-16 h-16 object-cover rounded"
-                />
-                <div>
-                  <h4 class="text-sm font-medium">
-                    HP LaserJet Pro MFP 3301fdw
-                  </h4>
-                  <p class="text-sm text-gray-600">$529.99</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-4">
-                <img
-                  src="./img/printer3.png"
-                  alt="Best Seller"
-                  class="w-16 h-16 object-cover rounded"
-                />
-                <div>
-                  <h4 class="text-sm font-medium">HP DeskJet 4255e</h4>
-                  <p class="text-sm text-gray-600">$68.99</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-        <!-- Products Grid -->
-        <section class="w-full md:w-3/4">
-          <h3 class="text-2xl font-semibold mb-8">Available Printers</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Product Card -->
-            <div class="bg-white p-4 rounded-lg shadow-md">
-              <img
-                src="./img/printer1.png"
-                alt="HP Color LaserJet Pro 3201dw"
-                class="w-full h-40 object-cover mb-4"
-              />
-              <h2 class="text-lg font-semibold">
-                HP Color LaserJet Pro 3201dw Printer
-              </h2>
-              <p class="text-gray-600">$259.00</p>
-              <a href="Addtocart.html"
-                ><button
-                  class="mt-2 w-full bg-blue-600 text-white py-2 rounded"
-                >
-                  Add to Cart
-                </button></a
-              >
-            </div>
-
-            <div class="bg-white p-4 rounded-lg shadow-md">
-              <img
-                src="./img/printer2.png"
-                alt="HP LaserJet Pro MFP 3301fdw"
-                class="w-full h-40 object-cover mb-4"
-              />
-              <h2 class="text-lg font-semibold">
-                HP Color LaserJet Pro MFP 3301fdw Wireless Printer
-              </h2>
-              <p class="text-gray-600">$529.99</p>
-              <a href="Addtocart.html"
-                ><button
-                  class="mt-2 w-full bg-blue-600 text-white py-2 rounded"
-                >
-                  Add to Cart
-                </button></a
-              >
-            </div>
-
-            <div class="bg-white p-4 rounded-lg shadow-md">
-              <img
-                src="./img/printer3.png"
-                alt="HP DeskJet 4255e"
-                class="w-full h-40 object-cover mb-4"
-              />
-              <h2 class="text-lg font-semibold">
-                HP DeskJet 4255e All-in-One Printer
-              </h2>
-              <p class="text-gray-600">$68.99</p>
-              <a href="Addtocart.html"
-                ><button
-                  class="mt-2 w-full bg-blue-600 text-white py-2 rounded"
-                >
-                  Add to Cart
-                </button></a
-              >
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow-md">
-              <img
-                src="./img/printer4.png"
-                alt="HP DeskJet 4255e"
-                class="w-full h-40 object-cover mb-4"
-              />
-              <h2 class="text-lg font-semibold">
-                HP Home & Office 200 Portable Wireless Color Inkjet Printer
-              </h2>
-              <p class="text-gray-600">$319.99</p>
-              <a href="Addtocart.html"
-                ><button
-                  class="mt-2 w-full bg-blue-600 text-white py-2 rounded"
-                >
-                  Add to Cart
-                </button></a
-              >
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow-md">
-              <img
-                src="./img/printer5.png"
-                alt="HP DeskJet 4255e"
-                class="w-full h-40 object-cover mb-4"
-              />
-              <h2 class="text-lg font-semibold">
-                HP OfficeJet Pro 9730e Wide-format Printer
-              </h2>
-              <p class="text-gray-600">$359.19</p>
-              <a href="Addtocart.html"
-                ><button
-                  class="mt-2 w-full bg-blue-600 text-white py-2 rounded"
-                >
-                  Add to Cart
-                </button></a
-              >
-            </div>
-          </div>
-        </section>
+    <!-- Header -->
+    <header class="bg-gray-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h1 class="text-4xl font-bold">SmartPrints Policies</h1>
+        <nav class="mt-4 space-x-6 text-lg">
+          <a href="#privacy" class="hover:text-orange-400 transition"
+            >Privacy Policy</a
+          >
+          <a href="#refund" class="hover:text-orange-400 transition"
+            >Refund Policy</a
+          >
+          <a href="#terms" class="hover:text-orange-400 transition"
+            >Terms & Conditions</a
+          >
+          <a href="#disclaimer" class="hover:text-orange-400 transition"
+            >Disclaimer</a
+          >
+        </nav>
       </div>
-    </div>
+    </header>
 
-    <!-- footer -->
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 space-y-10">
+      <section id="privacy" class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-3">Privacy Policy</h2>
+        <p class="mb-4">
+          At SmartPrints, we are committed to protecting your privacy. We
+          collect personal data only for order fulfillment, customer support,
+          and marketing communications (with consent).
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+          <li>We do not sell or share your data with third parties.</li>
+          <li>Your information is stored securely.</li>
+          <li>You can request deletion of your data anytime.</li>
+        </ul>
+      </section>
+
+      <section id="refund" class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-3">Refund Policy</h2>
+        <p class="mb-4">
+          We offer refunds only under the following conditions:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+          <li>Wrong product delivered</li>
+          <li>Damaged during shipping</li>
+          <li>Not as described on the website</li>
+        </ul>
+        <p class="mt-4">
+          All refund requests must be made within 7 days of delivery. For
+          assistance, contact
+          <a
+            href="mailto:support@smartprints.online"
+            class="text-blue-600 underline"
+            >support@smartprints.online</a
+          >.
+        </p>
+      </section>
+
+      <section id="terms" class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-semibold mb-3">Terms & Conditions</h2>
+        <p class="mb-4">
+          By using SmartPrints.online, you agree to the following terms:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+          <li>
+            Products are made to order and non-returnable unless defective.
+          </li>
+          <li>Users are responsible for providing accurate information.</li>
+          <li>We reserve the right to cancel suspicious orders.</li>
+        </ul>
+      </section>
+
+      <section id="disclaimer" class="bg-white p-6 rounded-lg shadow mb-20">
+        <h2 class="text-2xl font-semibold mb-3">Disclaimer</h2>
+        <p>
+          All content on SmartPrints is provided for general information. We do
+          our best to keep the information accurate but do not guarantee it.
+          Product images are for reference only and may vary slightly.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
       <div class="max-w-7xl mx-auto px-6">
         <!-- Contact Banner -->
         <div
-          class="bg-blue-600 text-white text-center p-5 rounded-lg mb-8 shadow-lg"
+          class="bg-blue-600 text-white text-center p-6 rounded-lg mb-10 shadow-lg"
         >
           <p class="text-lg font-semibold">
             Have any questions or requests? We're here to help!
           </p>
-          <a href="Contact.html"
-            ><button
-              class="mt-3 px-6 py-3 bg-black text-white font-bold rounded-lg shadow-md hover:bg-gray-800 transition"
+          <a href="Contact.html">
+            <button
+              class="mt-4 px-6 py-3 bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition"
             >
               CHAT NOW
-            </button></a
-          >
+            </button>
+          </a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
           <!-- Company Info -->
           <div>
             <h3 class="text-xl font-bold text-white">Smart Printers</h3>
-            <!-- <img src="./img/Logo.png" alt="logo" /> -->
             <p class="mt-3 text-sm">
               Smart Printers offers a wide range of printers, computers, and IT
               products globally. Shop online for the best deals.
             </p>
-            <div class="flex space-x-4 mt-4">
-              <a
-                href="#"
-                class="text-blue-500 text-2xl hover:text-blue-400 transition"
+            <div class="flex space-x-4 mt-4 text-2xl">
+              <a href="#" class="text-blue-500 hover:text-blue-400"
                 ><i class="fab fa-facebook"></i
               ></a>
-              <a
-                href="#"
-                class="text-blue-400 text-2xl hover:text-blue-300 transition"
+              <a href="#" class="text-blue-400 hover:text-blue-300"
                 ><i class="fab fa-twitter"></i
               ></a>
-              <a
-                href="#"
-                class="text-blue-700 text-2xl hover:text-blue-600 transition"
+              <a href="#" class="text-blue-700 hover:text-blue-600"
                 ><i class="fab fa-linkedin"></i
               ></a>
-              <a
-                href="#"
-                class="text-pink-500 text-2xl hover:text-pink-400 transition"
+              <a href="#" class="text-pink-500 hover:text-pink-400"
                 ><i class="fab fa-instagram"></i
               ></a>
             </div>
@@ -434,37 +321,25 @@
             <h3 class="text-lg font-bold text-white">Useful Links</h3>
             <ul class="mt-3 space-y-2 text-sm">
               <li>
-                <a href="About.html" class="hover:text-orange-400 transition"
-                  >About</a
-                >
+                <a href="About.html" class="hover:text-orange-400">About</a>
               </li>
               <li>
-                <a href="Contact.html" class="hover:text-orange-400 transition"
-                  >Contact</a
-                >
+                <a href="Contact.html" class="hover:text-orange-400">Contact</a>
               </li>
+              <li><a href="#" class="hover:text-orange-400">Blog</a></li>
               <li>
-                <a href="#" class="hover:text-orange-400 transition">Blog</a>
-              </li>
-              <li>
-                <a href="Printers.html" class="hover:text-orange-400 transition"
+                <a href="Printers.html" class="hover:text-orange-400"
                   >All Products</a
                 >
               </li>
               <li>
-                <a href="Cart.html" class="hover:text-orange-400 transition"
-                  >Cart</a
-                >
+                <a href="Cart.html" class="hover:text-orange-400">Cart</a>
               </li>
               <li>
-                <a href="Cart.html" class="hover:text-orange-400 transition"
-                  >Checkout</a
-                >
+                <a href="Cart.html" class="hover:text-orange-400">Checkout</a>
               </li>
               <li>
-                <a
-                  href="MyAccount.html"
-                  class="hover:text-orange-400 transition"
+                <a href="MyAccount.html" class="hover:text-orange-400"
                   >My Account</a
                 >
               </li>
@@ -476,27 +351,27 @@
             <h3 class="text-lg font-bold text-white">Top Products</h3>
             <ul class="mt-3 space-y-2 text-sm">
               <li>
-                <a href="Printers.html" class="hover:text-orange-400 transition"
+                <a href="Printers.html" class="hover:text-orange-400"
                   >All-In-One Printers</a
                 >
               </li>
               <li>
-                <a href="Printers.html" class="hover:text-orange-400 transition"
+                <a href="Printers.html" class="hover:text-orange-400"
                   >Home & Office Printers</a
                 >
               </li>
               <li>
-                <a href="Printers.html" class="hover:text-orange-400 transition"
+                <a href="Printers.html" class="hover:text-orange-400"
                   >InkJet Printers</a
                 >
               </li>
               <li>
-                <a href="Printers.html" class="hover:text-orange-400 transition"
+                <a href="Printers.html" class="hover:text-orange-400"
                   >Laser Printers</a
                 >
               </li>
               <li>
-                <a href="Printers.html" class="hover:text-orange-400 transition"
+                <a href="Printers.html" class="hover:text-orange-400"
                   >Wireless Printers</a
                 >
               </li>
@@ -507,8 +382,8 @@
           <div>
             <h3 class="text-lg font-bold text-white">Contact Us</h3>
             <p class="mt-3 text-sm flex items-center">
-              <i class="fas fa-map-marker-alt mr-2"></i> 164 W 25th St 12th
-              Floor, New York, NY 10001
+              <i class="fas fa-map-marker-alt mr-2"></i> 164 W 25th St, New
+              York, NY 10001
             </p>
             <p class="mt-2 text-sm flex items-center">
               <i class="fas fa-envelope mr-2"></i> support@smartprinters.net
@@ -522,7 +397,6 @@
                 alt="PayPal"
                 class="h-8"
               />
-
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg"
                 alt="MasterCard"
@@ -531,24 +405,25 @@
             </div>
           </div>
         </div>
-        <!-- Legal Links -->
+
+        <!-- Legal Footer -->
         <div
           class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400 space-y-2"
         >
           <div class="space-x-4">
-            <a href="Legalpages.html" class="hover:text-orange-400 transition"
+            <a href="Legalpages.html" class="hover:text-orange-400"
               >Privacy Policy</a
             >
-            <span>|</span>
-            <a href="Legalpages.html" class="hover:text-orange-400 transition"
+            |
+            <a href="Legalpages.html" class="hover:text-orange-400"
               >Refund Policy</a
             >
-            <span>|</span>
-            <a href="Legalpages.html" class="hover:text-orange-400 transition"
+            |
+            <a href="Legalpages.html" class="hover:text-orange-400"
               >Terms & Conditions</a
             >
-            <span>|</span>
-            <a href="Legalpages.html" class="hover:text-orange-400 transition"
+            |
+            <a href="Legalpages.html" class="hover:text-orange-400"
               >Disclaimer</a
             >
           </div>
@@ -556,6 +431,5 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
